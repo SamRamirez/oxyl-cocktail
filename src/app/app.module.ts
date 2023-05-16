@@ -10,7 +10,7 @@ import { RecipeCardComponent } from './recipe/recipe-card/recipe-card.component'
 import { RecipeListComponent } from './recipe/recipe-list/recipe-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
-import { RecipeModule } from './recipe/recipe.module';
+//lazy loadé  import { RecipeModule } from './recipe/recipe.module';
 
 @NgModule({
   declarations: [

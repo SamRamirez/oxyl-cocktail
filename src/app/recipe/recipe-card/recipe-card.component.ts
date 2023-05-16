@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Recipe } from '../../model/recipe.model';
 
 @Component({
@@ -10,6 +10,9 @@ export class RecipeCardComponent {
 
   @Input()
   recipe?: Recipe;
+
+  @Output()
+  delete: EventEmitter<number> = new EventEmitter();
 
   toggled: boolean = false;
 

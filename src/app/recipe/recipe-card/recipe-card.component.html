@@ -19,5 +19,8 @@
   <mat-card-actions>
     <button *ngIf="!toggled" mat-button (click)="toggle()">Ingredients</button>
     <button *ngIf="toggled" mat-button (click)="toggle()">Hide Ingredients</button>
+    <a mat-button [routerLink]="[recipe?.id]">details</a>
+    <button mat-button (click)="delete.emit(recipe?.id)">delete</button>
+
   </mat-card-actions>
 </mat-card>

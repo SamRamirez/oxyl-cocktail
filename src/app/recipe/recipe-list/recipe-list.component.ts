@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Recipe } from '../../model/recipe.model';
 import { RecipeService } from '../../services/recipe.service';
 
@@ -9,12 +10,25 @@ import { RecipeService } from '../../services/recipe.service';
 })
 export class RecipeListComponent {
 
-  constructor(private recipeService : RecipeService){}
+
+  constructor(
+    private recipeService : RecipeService,
+    private route: ActivatedRoute
+    ){}
 
   ngOnInit(){
     this.recipeService.getRecipes().subscribe(recipeList => {this.recipeList = recipeList});
   }
   recipeList?: Recipe[]
   toggled: boolean = false;
+
+
+  deleteRecipe(id: number): void {
+    //const id = Number(this.route.snapshot.params['id']);
+    this.recipeService.deleteRecipe(id)
+      .subscribe(
+        () => this.recipeService.getRecipes().subscribe(recipeList => {this.recipeList = recipeList})
+        );
+  }
 
 }

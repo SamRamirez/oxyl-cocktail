@@ -27,4 +27,8 @@ getRecipe(id: number): Observable<Recipe> {
   return this.http.get<Recipe>(`${ this.recipeUrl }/${ id }`);
 }
 
+deleteRecipe(id: number): Observable<Object>{
+  return this.http.delete<Recipe>(`${ this.recipeUrl }/${ id }`);
+}
+
 }
