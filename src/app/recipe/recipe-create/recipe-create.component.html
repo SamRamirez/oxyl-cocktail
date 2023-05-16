@@ -1,0 +1,14 @@
+<form [formGroup]="recipeForm">
+
+  <label for="name">Name: </label>
+  <input id="name" type="text" formControlName="name">
+
+  <label for="picture">PictureUrl: </label>
+  <input id="picture" type="text" formControlName="picture">
+
+  <label for="description">description: </label>
+  <input id="description" type="text" formControlName="description">
+
+</form>
+
+<button type="submit" [disabled]="!recipeForm.valid" (click)="submit()">submit</button>

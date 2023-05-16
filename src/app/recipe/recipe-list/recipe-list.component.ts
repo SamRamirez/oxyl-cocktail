@@ -24,7 +24,6 @@ export class RecipeListComponent {
 
 
   deleteRecipe(id: number): void {
-    //const id = Number(this.route.snapshot.params['id']);
     this.recipeService.deleteRecipe(id)
       .subscribe(
         () => this.recipeService.getRecipes().subscribe(recipeList => {this.recipeList = recipeList})

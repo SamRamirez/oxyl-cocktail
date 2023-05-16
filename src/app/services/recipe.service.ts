@@ -31,4 +31,15 @@ deleteRecipe(id: number): Observable<Object>{
   return this.http.delete<Recipe>(`${ this.recipeUrl }/${ id }`);
 }
 
+postRecipe(recipe: Recipe): Observable<Recipe>{
+  return this.http.post<Recipe>(`${ this.recipeUrl }`, recipe);
+}
+
+// addHero(hero: Hero): Observable<Hero> {
+//   return this.http.post<Hero>(this.heroesUrl, hero, httpOptions)
+//     .pipe(
+//       catchError(this.handleError('addHero', hero))
+//     );
+// }
+
 }

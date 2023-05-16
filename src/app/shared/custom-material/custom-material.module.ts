@@ -4,9 +4,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 const MATERIAL_MODULES = [
-  MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule
+  MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule, MatFormFieldModule,
 ];
 
 @NgModule({
