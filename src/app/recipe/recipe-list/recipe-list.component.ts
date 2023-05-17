@@ -17,7 +17,10 @@ export class RecipeListComponent {
     ){}
 
   ngOnInit(){
-    this.recipeService.getRecipes().subscribe(recipeList => {this.recipeList = recipeList});
+    this.recipeService.getRecipes().subscribe(recipeList => {
+      console.log(recipeList[3])
+      this.recipeList = recipeList});
+    console.log(this.recipeList?[0]:"aa")
   }
   recipeList?: Recipe[]
   toggled: boolean = false;

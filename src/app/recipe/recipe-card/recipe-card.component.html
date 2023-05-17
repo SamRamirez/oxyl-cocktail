@@ -1,7 +1,7 @@
 <mat-card class="example-card">
   <mat-card-header>
     <img mat-card-avatar src="{{recipe?.picture}}">
-    <mat-card-title>{{recipe?.name}}</mat-card-title>
+    <mat-card-title>{{recipe?.name | uppercase}}</mat-card-title>
     <mat-card-subtitle>#{{recipe?.id}}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="{{recipe?.picture}}" alt="Photo of a Cocktail">
